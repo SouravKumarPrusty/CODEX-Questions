@@ -3,9 +3,9 @@
 
 using namespace std;
 
-long checkprime(long PN)
+int checkprime(int PN)
 {
-    long i=1,c=0;
+    int i=1,c=0;
 
      for(i=1;i<=sqrt(PN);i++)
         {if(PN%i==0)
@@ -17,7 +17,7 @@ long checkprime(long PN)
 }
 int main()
 {
-   long pn=1 ;
+   int pn=1 ;
    int n=0, PN;
 
     while(n<=10001)
