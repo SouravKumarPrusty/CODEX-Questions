@@ -1,43 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="EQ5" />
-		<Option execution_dir="C:/Euler/EQ5/" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/EQ5" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/EQ5" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-			<Add option="-fexceptions" />
-		</Compiler>
-		<Unit filename="../EQ5/main.cpp" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+#include <iostream>
+using namespace std;
+
+int HCF(int a, int b)
+{   int temp ;
+    if (a>b)
+    {
+        temp=a ;
+        a=b;
+        b=temp;
+    }
+    if(b%a==0)
+        return a;
+    else
+        return HCF(b % a, a);
+}
+int main()
+{
+    long long lcm = 1, hcf ;
+    int i;
+
+    for(i = 2; i <= 20; i++)
+    {
+        hcf = HCF(lcm, i);
+        lcm = (lcm * i) / hcf;
+    }
+
+    cout<<"The smallest no. divisible by all the no. from 1-20 is: "<<lcm;
+    return 0;
+}
