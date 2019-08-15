@@ -14,14 +14,12 @@ int main()
   long LP=0,m,r ;
   for(i=100;i<1000;i++)
   { for(j=100;j<1000;j++)
-    { if(check(i*j))
       { m=i*j ;
        r=check(m) ;
        if(m==r && r>LP)
 	  { LP=r;  }
       }
     }
-  }
   cout<<"The largest pallindrome is "<<LP<<'\n' ;
 return 0;
 }
