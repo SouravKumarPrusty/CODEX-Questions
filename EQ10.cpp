@@ -2,31 +2,30 @@
 #include<math.h>
 using namespace std;
 
-long prime(long ) ;
+int prime(long long) ;
 
 
 int main()
-{  long n;
-   long i, j =2000000 ;
-   long s= 0;
-   for(i=2;i<j;i++)
+{  long long i, j =2000000 ;
+   long long s= 2;
+   for(i=3;i<j;i+=2)
    {
-       n = prime(i) ;
-       s+=n;
+       if(prime(i)) 
+       {s+=n;}
    }
   cout<<"The sum= "<<s<<'\n' ;
 
 }
-long prime(long i)
+int prime(long long i)
 {
-     long n, c=0 ;
+     int n, c=0 ;
      for(n=1;n<=sqrt(i);n++)
      {
           if(i%n==0)
             c++ ;
      }
      if (c==1)
-        return i ;
+        return 1 ;
      else
         return 0;
 }
