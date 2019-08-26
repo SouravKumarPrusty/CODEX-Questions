@@ -11,7 +11,7 @@ int main()
    for(i=3;i<j;i+=2)
    {
        if(prime(i)) 
-       {s+=n;}
+       {s+=i;}
    }
   cout<<"The sum= "<<s<<'\n' ;
 
