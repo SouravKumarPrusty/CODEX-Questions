@@ -20,15 +20,16 @@ int main()
    int pn=1 ;
    int n=0, PN;
 
-    while(n<=10001)
-        { PN= checkprime(pn) ;
-         if(PN!=1)
-           { pn++; }
+    while(n<10001)
+    {if(pn%2!=0)
+    {  { PN= checkprime(pn) ;
+         if(PN==1)
+           { pn++; n++ ;}
          else
-            {
-            pn++ ;
-            n++ ;  }
+            { pn++ ;}
         }
+     else
+         pn++; }
     cout<<"The 10001st prime number is "<<pn-1<<'\n' ;
 
     return 0;
