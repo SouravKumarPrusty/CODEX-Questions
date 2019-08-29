@@ -7,12 +7,7 @@ int main()
 {
     long long num = 600851475143;
     long long MP = -1;
-    while (num % 2 == 0) {
-
-        MP = 2;
-
-        num /= 1;
-    }
+    
     for (int i = 3; i <= sqrt(num); i += 2)
     {
 
