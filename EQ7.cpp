@@ -7,7 +7,7 @@ int checkprime(int PN)
 {
     int i=1,c=0;
 
-     for(i=1;i<=sqrt(PN);i++)
+     for(i=1;i<=sqrt(PN);i+=2)
         {if(PN%i==0)
         {c++ ;}   }
     if(c==1)
@@ -22,7 +22,7 @@ int main()
 
     while(n<10001)
     {if(pn%2!=0)
-    {  { PN= checkprime(pn) ;
+      { PN= checkprime(pn) ;
          if(PN==1)
            { pn++; n++ ;}
          else
