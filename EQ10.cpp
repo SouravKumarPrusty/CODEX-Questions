@@ -19,7 +19,7 @@ int main()
 int prime(long long i)
 {
      int n, c=0 ;
-     for(n=1;n<=sqrt(i);n++)
+     for(n=1;n<=sqrt(i);n+=2)
      {
           if(i%n==0)
             c++ ;
