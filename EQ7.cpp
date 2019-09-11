@@ -17,10 +17,10 @@ int checkprime(int PN)
 }
 int main()
 {
-   int pn=1 ;
+   int pn=3 ;
    int n=0, PN;
 
-    while(n<10001)
+    while(n<10000)
     {if(pn%2!=0)
       { PN= checkprime(pn) ;
          if(PN==1)
